@@ -1,19 +1,21 @@
-# FunnelEnvy Command Line Interface
+# Tag Command Line Interface
 
-*This tool is under active development! Breaking changes may be on the horizon. If you depend on `fecli` for day to day use, please reach out to @bruab when stuff goes wrong.*
+*This tool is under active development! Breaking changes may be on the horizon. If you depend on `tagcli` for day to day use, please reach out to @bruab when stuff goes wrong.*
 
-fecli is a command line tool for locally hosting frontend snippets. We use it to develop personalization campaigns and experiments for Optimizely Classic, Optimizely X, Adobe Test & Target, and Google Optimize.
+tagcli is a command line tool for locally hosting frontend snippets. You can use it to develop personalization campaigns and experiments for Optimizely Classic, Optimizely X, Adobe Test & Target, VWO, Google Optimize, and any similar platform.
 
 It consists of a local server to host your code and a [Tampermonkey](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo?hl=en) script to inject it.
 
 ### Dependencies
 
-You'll need to have [node.js](http://nodejs.org/) installed locally to run `fecli` and the Tampermonkey extension to view variations locally.
+You'll need to have [node.js](http://nodejs.org/) installed locally to run `tagcli` and the Tampermonkey extension to view variations locally.
 
 ## Installation
 
+⚠️ WIP post-fork - TODO this doesn't work yet :)
+
 ```
-npm install -g fecli
+npm install -g tagcli
 ```
 
 ## Quickstart
@@ -23,15 +25,15 @@ npm install -g fecli
 - Execute the following command:
 
 ```
-fecli host <path/to/some.json>
+tagcli host <path/to/some.json>
 ```
 
 - Visit https://localhost:8080 and follow the instructions to install the Tampermonkey userscript
-- Append `?fecli=activate` to any page on which you want to inject your code
+- Append `?tagcli=activate` to any page on which you want to inject your code
 
 ## What goes in the .json file
 
-At the minimum, your file must define an array of `"files"` to host. For a minimal example, see `demo/sample/minimal.json`. Hosting this file with `fecli` will inject the contents of a single JavaScript file into the browser.
+At the minimum, your file must define an array of `"files"` to host. For a minimal example, see `demo/sample/minimal.json`. Hosting this file with `tagcli` will inject the contents of a single JavaScript file into the browser.
 
 You can define as many files as you want, with ".js" or ".css" extensions. They'll be added to the page in the order listed.
 

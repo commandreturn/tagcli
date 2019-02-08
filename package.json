@@ -1,10 +1,10 @@
 {
-  "name": "fecli",
+  "name": "tagcli",
   "version": "0.4.0",
   "description": "A fork of optimizely-cli; a command line tool for local hosting of experiences for Optimizely Classic and X, Adobe Test & Target, and Google Optimize",
   "main": "index.js",
   "bin": {
-    "fecli": "bin/fecli.js"
+    "tagcli": "bin/tagcli.js"
   },
   "scripts": {
     "test": "standard"

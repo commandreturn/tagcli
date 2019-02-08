@@ -2,7 +2,7 @@
 
 var program = require('commander')
 var path = require('path')
-var fecliPackage = require(path.join(__dirname, '../', 'package.json'))
+var tagcliPackage = require(path.join(__dirname, '../', 'package.json'))
 
 /* commands */
 var loadCommand = function (cmd) {
@@ -14,8 +14,8 @@ var loadCommand = function (cmd) {
 }
 
 program
-  .version(fecliPackage.version)
-  .description(fecliPackage.description)
+  .version(tagcliPackage.version)
+  .description(tagcliPackage.description)
 
 program
   .command('host <path>')
